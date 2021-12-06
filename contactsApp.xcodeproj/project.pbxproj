@@ -14,6 +14,10 @@
 		8D899E7A275EC533006F16EE /* contactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E78275EC533006F16EE /* contactsApp.xcdatamodeld */; };
 		8D899E7C275EC536006F16EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D899E7B275EC536006F16EE /* Assets.xcassets */; };
 		8D899E7F275EC536006F16EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D899E7D275EC536006F16EE /* LaunchScreen.storyboard */; };
+		8D899E8E275EC932006F16EE /* enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E8D275EC932006F16EE /* enviroment.swift */; };
+		8D899E91275ECC15006F16EE /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E90275ECC15006F16EE /* Users.swift */; };
+		8D899E95275ECDC1006F16EE /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E94275ECDC1006F16EE /* Posts.swift */; };
+		8D899E98275ED06E006F16EE /* PostsId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E97275ED06E006F16EE /* PostsId.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		8D899E7B275EC536006F16EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D899E7E275EC536006F16EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D899E80275EC536006F16EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D899E8D275EC932006F16EE /* enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enviroment.swift; sourceTree = "<group>"; };
+		8D899E90275ECC15006F16EE /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		8D899E94275ECDC1006F16EE /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		8D899E97275ED06E006F16EE /* PostsId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsId.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,12 @@
 		8D899E6E275EC533006F16EE /* contactsApp */ = {
 			isa = PBXGroup;
 			children = (
+				8D899E8C275EC914006F16EE /* Utils */,
+				8D899E8B275EC902006F16EE /* Constants */,
+				8D899E8A275EC775006F16EE /* Controller */,
+				8D899E88275EC5A7006F16EE /* ViewModel */,
+				8D899E87275EC5A2006F16EE /* View */,
+				8D899E86275EC59A006F16EE /* Model */,
 				8D899E6F275EC533006F16EE /* AppDelegate.swift */,
 				8D899E71275EC533006F16EE /* SceneDelegate.swift */,
 				8D899E73275EC533006F16EE /* ViewController.swift */,
@@ -68,6 +82,84 @@
 				8D899E78275EC533006F16EE /* contactsApp.xcdatamodeld */,
 			);
 			path = contactsApp;
+			sourceTree = "<group>";
+		};
+		8D899E86275EC59A006F16EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D899E92275ECD2D006F16EE /* Posts */,
+				8D899E8F275ECBEA006F16EE /* Users */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8D899E87275EC5A2006F16EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D899E88275EC5A7006F16EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8D899E8A275EC775006F16EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8D899E8B275EC902006F16EE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8D899E8D275EC932006F16EE /* enviroment.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8D899E8C275EC914006F16EE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8D899E8F275ECBEA006F16EE /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				8D899E90275ECC15006F16EE /* Users.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		8D899E92275ECD2D006F16EE /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				8D899E96275ED05C006F16EE /* PostsId */,
+				8D899E93275ECDAF006F16EE /* Posts */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		8D899E93275ECDAF006F16EE /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				8D899E94275ECDC1006F16EE /* Posts.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		8D899E96275ED05C006F16EE /* PostsId */ = {
+			isa = PBXGroup;
+			children = (
+				8D899E97275ED06E006F16EE /* PostsId.swift */,
+			);
+			path = PostsId;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D899E7A275EC533006F16EE /* contactsApp.xcdatamodeld in Sources */,
+				8D899E95275ECDC1006F16EE /* Posts.swift in Sources */,
 				8D899E74275EC533006F16EE /* ViewController.swift in Sources */,
+				8D899E8E275EC932006F16EE /* enviroment.swift in Sources */,
 				8D899E70275EC533006F16EE /* AppDelegate.swift in Sources */,
+				8D899E91275ECC15006F16EE /* Users.swift in Sources */,
+				8D899E98275ED06E006F16EE /* PostsId.swift in Sources */,
 				8D899E72275EC533006F16EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
