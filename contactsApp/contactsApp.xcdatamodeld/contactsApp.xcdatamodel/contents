@@ -14,10 +14,18 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+                <constraint value="name"/>
+                <constraint value="email"/>
+                <constraint value="phone"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Users" positionX="-63" positionY="-18" width="128" height="89"/>
         <element name="Posts" positionX="190.21630859375" positionY="105.89306640625" width="128" height="58"/>
         <element name="PostsId" positionX="-62.976318359375" positionY="111.6164855957031" width="128" height="43"/>
+        <element name="Users" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

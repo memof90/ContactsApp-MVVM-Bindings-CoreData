@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F55AE213-1D8E-4834-B077-02302028212E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD7AF788-FCFD-442F-BDF0-F71ABB331C22"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactsApp/Services/NetworkServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchUsers(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECAAB24D-804D-427F-B3E5-CD1620159FEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactsApp/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EAC83CE-146D-44E5-A2EF-268B0658FEA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactsApp/DataManger/DatabaseHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetch(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8420FAAF-F757-4B9A-B5F3-92806145D1F9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactsApp/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8420FAAF-F757-4B9A-B5F3-92806145D1F9 - 200160f018d6e6d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "contactsApp.ViewController.users.getter : Swift.Optional&lt;Swift.Array&lt;contactsApp.Users&gt;&gt;"
+                  moduleName = "contactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memofigueredo/MEGA/contactsApp/contactsApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "8420FAAF-F757-4B9A-B5F3-92806145D1F9 - cc1e522b19ff5ec5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "contactsApp.ViewController.users.setter : Swift.Optional&lt;Swift.Array&lt;contactsApp.Users&gt;&gt;"
+                  moduleName = "contactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memofigueredo/MEGA/contactsApp/contactsApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "121">
+               </Location>
+               <Location
+                  uuid = "8420FAAF-F757-4B9A-B5F3-92806145D1F9 - cabff2bbff7076c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "contactsApp.ViewController.users.modify : Swift.Optional&lt;Swift.Array&lt;contactsApp.Users&gt;&gt;"
+                  moduleName = "contactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memofigueredo/MEGA/contactsApp/contactsApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "8420FAAF-F757-4B9A-B5F3-92806145D1F9 - 2a26917a6de104ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "contactsApp.ViewController.users.modify : Swift.Optional&lt;Swift.Array&lt;contactsApp.Users&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "contactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memofigueredo/MEGA/contactsApp/contactsApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "8420FAAF-F757-4B9A-B5F3-92806145D1F9 - 6843af52902d5c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "contactsApp.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; contactsApp.ViewController"
+                  moduleName = "contactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memofigueredo/MEGA/contactsApp/contactsApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  uuid = "8420FAAF-F757-4B9A-B5F3-92806145D1F9 - be10645e5c1227b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "contactsApp.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;contactsApp.ViewController&gt;"
+                  moduleName = "contactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memofigueredo/MEGA/contactsApp/contactsApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "187">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4827129-E5C2-4BD0-AA35-9F0AA12EA316"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactsApp/Services/NetworkServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchUsers(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F25A7B15-45E1-48F9-BE42-4DA400734D71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactsApp/Services/NetworkServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchUsers(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43F64647-D2C4-4D22-9754-A6C5DB8DE113"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactsApp/Services/NetworkServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchUsers(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

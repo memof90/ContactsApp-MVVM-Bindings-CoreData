@@ -18,6 +18,10 @@
 		8D899E91275ECC15006F16EE /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E90275ECC15006F16EE /* Users.swift */; };
 		8D899E95275ECDC1006F16EE /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E94275ECDC1006F16EE /* Posts.swift */; };
 		8D899E98275ED06E006F16EE /* PostsId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E97275ED06E006F16EE /* PostsId.swift */; };
+		8D899E9B275ED183006F16EE /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E9A275ED183006F16EE /* NetworkServices.swift */; };
+		8D899E9D275ED599006F16EE /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E9C275ED599006F16EE /* UsersViewModel.swift */; };
+		8D899E9F275ED8EF006F16EE /* UsersServicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E9E275ED8EF006F16EE /* UsersServicesModel.swift */; };
+		8D899EA2275EDA30006F16EE /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899EA1275EDA30006F16EE /* DatabaseHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		8D899E90275ECC15006F16EE /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		8D899E94275ECDC1006F16EE /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		8D899E97275ED06E006F16EE /* PostsId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsId.swift; sourceTree = "<group>"; };
+		8D899E9A275ED183006F16EE /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		8D899E9C275ED599006F16EE /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		8D899E9E275ED8EF006F16EE /* UsersServicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersServicesModel.swift; sourceTree = "<group>"; };
+		8D899EA1275EDA30006F16EE /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,8 @@
 		8D899E6E275EC533006F16EE /* contactsApp */ = {
 			isa = PBXGroup;
 			children = (
+				8D899EA0275EDA15006F16EE /* DataManger */,
+				8D899E99275ED164006F16EE /* Services */,
 				8D899E8C275EC914006F16EE /* Utils */,
 				8D899E8B275EC902006F16EE /* Constants */,
 				8D899E8A275EC775006F16EE /* Controller */,
@@ -103,6 +113,7 @@
 		8D899E88275EC5A7006F16EE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8D899E9C275ED599006F16EE /* UsersViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -133,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				8D899E90275ECC15006F16EE /* Users.swift */,
+				8D899E9E275ED8EF006F16EE /* UsersServicesModel.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -160,6 +172,22 @@
 				8D899E97275ED06E006F16EE /* PostsId.swift */,
 			);
 			path = PostsId;
+			sourceTree = "<group>";
+		};
+		8D899E99275ED164006F16EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D899E9A275ED183006F16EE /* NetworkServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8D899EA0275EDA15006F16EE /* DataManger */ = {
+			isa = PBXGroup;
+			children = (
+				8D899EA1275EDA30006F16EE /* DatabaseHandler.swift */,
+			);
+			path = DataManger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,11 +264,15 @@
 				8D899E7A275EC533006F16EE /* contactsApp.xcdatamodeld in Sources */,
 				8D899E95275ECDC1006F16EE /* Posts.swift in Sources */,
 				8D899E74275EC533006F16EE /* ViewController.swift in Sources */,
+				8D899EA2275EDA30006F16EE /* DatabaseHandler.swift in Sources */,
+				8D899E9F275ED8EF006F16EE /* UsersServicesModel.swift in Sources */,
+				8D899E9B275ED183006F16EE /* NetworkServices.swift in Sources */,
 				8D899E8E275EC932006F16EE /* enviroment.swift in Sources */,
 				8D899E70275EC533006F16EE /* AppDelegate.swift in Sources */,
 				8D899E91275ECC15006F16EE /* Users.swift in Sources */,
 				8D899E98275ED06E006F16EE /* PostsId.swift in Sources */,
 				8D899E72275EC533006F16EE /* SceneDelegate.swift in Sources */,
+				8D899E9D275ED599006F16EE /* UsersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
