@@ -38,8 +38,11 @@ class ViewController: UIViewController {
 
 //        getUsers()
 //        fetchToCoreData()
-        viewModel.getUsers()
-        viewModel.fetchToCoreData()
+//        viewModel.getUsers()
+//        viewModel.fetchToCoreData()
+        getPost()
+        fetchCoreData()
+        postId()
         
         viewModel.users.bind { [weak self ] _ in
             DispatchQueue.main.async {
@@ -67,6 +70,28 @@ class ViewController: UIViewController {
 //    func resetCoreData() {
 //        self.database.reset(Users.self)
 //    }
+    
+    var post: [Posts] = []
+    
+    func getPost(){
+        NetworkServices.shared.fetchPostUser {
+            self.post = self.database.fetch(Posts.self)
+        }
+    }
+    
+    func fetchCoreData() {
+        post = database.fetch(Posts.self)
+    }
+    
+    func postId(){
+
+        for posts in post {
+            NetworkServices.shared.fetchPostUserId(userId: posts.userId) {
+                
+               }
+        }
+       
+    }
     
    
     

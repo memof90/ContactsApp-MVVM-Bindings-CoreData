@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3BEB842761519000748CE2 /* PostsServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BEB832761519000748CE2 /* PostsServiceModel.swift */; };
+		8D3BEB872761604900748CE2 /* PostsIdServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BEB862761604900748CE2 /* PostsIdServiceModel.swift */; };
 		8D899E70275EC533006F16EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E6F275EC533006F16EE /* AppDelegate.swift */; };
 		8D899E72275EC533006F16EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E71275EC533006F16EE /* SceneDelegate.swift */; };
 		8D899E74275EC533006F16EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899E73275EC533006F16EE /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D3BEB832761519000748CE2 /* PostsServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsServiceModel.swift; sourceTree = "<group>"; };
+		8D3BEB862761604900748CE2 /* PostsIdServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsIdServiceModel.swift; sourceTree = "<group>"; };
 		8D899E6C275EC533006F16EE /* contactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D899E6F275EC533006F16EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D899E71275EC533006F16EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				8D899E94275ECDC1006F16EE /* Posts.swift */,
+				8D3BEB832761519000748CE2 /* PostsServiceModel.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				8D899E97275ED06E006F16EE /* PostsId.swift */,
+				8D3BEB862761604900748CE2 /* PostsIdServiceModel.swift */,
 			);
 			path = PostsId;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 				8D899E95275ECDC1006F16EE /* Posts.swift in Sources */,
 				8DFCFA21276007EA001C0812 /* UIViewController+Extension.swift in Sources */,
 				8D899E74275EC533006F16EE /* ViewController.swift in Sources */,
+				8D3BEB872761604900748CE2 /* PostsIdServiceModel.swift in Sources */,
 				8DFCFA3D27602CCF001C0812 /* UIView+Layout.swift in Sources */,
 				8DFCFA40276038C5001C0812 /* UsersCollectionViewCell.swift in Sources */,
 				8D899EA2275EDA30006F16EE /* DatabaseHandler.swift in Sources */,
@@ -336,6 +343,7 @@
 				8DFCFA2427600839001C0812 /* CardViewShadow.swift in Sources */,
 				8D899E70275EC533006F16EE /* AppDelegate.swift in Sources */,
 				8D899E91275ECC15006F16EE /* Users.swift in Sources */,
+				8D3BEB842761519000748CE2 /* PostsServiceModel.swift in Sources */,
 				8D899E98275ED06E006F16EE /* PostsId.swift in Sources */,
 				8DFCFA2D27601B9E001C0812 /* Box.swift in Sources */,
 				8DF3FE0627610440003B2D07 /* UsersViewController.swift in Sources */,

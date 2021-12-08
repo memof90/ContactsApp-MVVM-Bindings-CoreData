@@ -81,6 +81,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    lazy var viewContext: NSManagedObjectContext = {
+        return self.persistentContainer.viewContext
+    }()
+
+    lazy var cacheContext: NSManagedObjectContext = {
+        return self.persistentContainer.newBackgroundContext()
+    }()
+
+    lazy var updateContext: NSManagedObjectContext = {
+        let _updateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        _updateContext.parent = self.viewContext
+        return _updateContext
+    }()
 
 }
 
