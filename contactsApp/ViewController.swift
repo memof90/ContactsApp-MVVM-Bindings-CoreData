@@ -13,17 +13,20 @@ class ViewController: UIViewController {
     
     let database = DatabaseHandler.shared
     
-//    lazy  var users = UsersViewModels.shared.users
+    var viewModel = userListViewModel()
+
+
     
-    var users: [Users]? {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.resetCoreData()
-            }
-           
-        }
-     }
+//    var users: [Users]? {
+//        didSet {
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//                self.resetCoreData()
+//            }
+//        }
+//     }
+    
+     
 
 
     override func viewDidLoad() {
@@ -32,31 +35,38 @@ class ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UsersTableView")
         tableView.delegate = self
         tableView.dataSource = self
+
+//        getUsers()
+//        fetchToCoreData()
+        viewModel.getUsers()
+        viewModel.fetchToCoreData()
         
-//        UsersViewModels.shared.getUsers()
-//        UsersViewModels.shared.fetchToCoreData()
-        getUsers()
-        fetchToCoreData()
+        viewModel.users.bind { [weak self ] _ in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                self?.viewModel.resetCoreData()
+            }
+        }
      
     }
 
 
     
-    func getUsers(){
-        NetworkServices.shared.fetchUsers {
-            self.users = self.database.fetch(Users.self)
-        }
-        
-    }
-    
-    func fetchToCoreData() {
-        users = database.fetch(Users.self)
-
-    }
-    
-    func resetCoreData() {
-        self.database.reset(Users.self)
-    }
+//    func getUsers(){
+//        NetworkServices.shared.fetchUsers {
+//            self.users = self.database.fetch(Users.self)
+//        }
+//
+//    }
+//
+//    func fetchToCoreData() {
+//        users = database.fetch(Users.self)
+//
+//    }
+//
+//    func resetCoreData() {
+//        self.database.reset(Users.self)
+//    }
     
    
     
@@ -64,14 +74,17 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users?.count ?? 0
+//        return users?.count ?? 0
+        return viewModel.numberOfRows(at: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "UsersTableView")!
         
-        cell.textLabel?.text = users?[indexPath.row].name
+//        cell.textLabel?.text = users?[indexPath.row].name
+        cell.textLabel?.text = viewModel.item(at: indexPath).name
         
+//
         return cell
     }
     

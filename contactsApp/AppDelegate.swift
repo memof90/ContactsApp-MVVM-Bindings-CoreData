@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let UInavegationBar = UINavigationBar.appearance()
+        UInavegationBar.setBackgroundImage(UIImage(), for: .default)
+        UInavegationBar.shadowImage = UIImage()
+        UInavegationBar.tintColor = .black
+        
         return true
     }
 

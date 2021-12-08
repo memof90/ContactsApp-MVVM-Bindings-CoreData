@@ -9,35 +9,36 @@ import Foundation
 import UIKit
 
 
-class UsersViewModels {
+class userListViewModel {
     
-    static let shared = UsersViewModels()
-    var users: [Users]? 
     let database = DatabaseHandler.shared
     
-//    MARK: - get Users services
+    var users: Observable<[Users]> = Observable([])
+    
+  
     func getUsers() {
         NetworkServices.shared.fetchUsers {
-            self.users = self.database.fetch(Users.self)
+            self.users.value = self.database.fetch(Users.self)
         }
     }
     
     func fetchToCoreData() {
-        users = database.fetch(Users.self)
+        users.value = database.fetch(Users.self)
     }
     
     func resetCoreData() {
         self.database.reset(Users.self)
     }
     
-    
     func numberOfRows(at section: Int) -> Int{
-        return users?.count ?? 0
+        return users.value?.count ?? 0
     }
     
     func item(at indexPath: IndexPath) -> Users {
-        return users?[indexPath.row] ?? users![indexPath.row]
+        return users.value![indexPath.row]
     }
-    
-    
 }
+
+
+
+
