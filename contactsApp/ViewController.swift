@@ -75,14 +75,15 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return users?.count ?? 0
-        return viewModel.numberOfRows(at: section)
+//        return viewModel.numberOfRows(at: section)
+        return viewModel.users.value?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "UsersTableView")!
         
 //        cell.textLabel?.text = users?[indexPath.row].name
-        cell.textLabel?.text = viewModel.item(at: indexPath).name
+        cell.textLabel?.text = viewModel.users.value![indexPath.row].name
         
 //
         return cell

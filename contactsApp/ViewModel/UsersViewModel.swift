@@ -35,13 +35,27 @@ class userListViewModel {
         self.database.reset(Users.self)
     }
     
-    func numberOfRows(at section: Int) -> Int{
-        return filter ? users.value?.count ?? 0
-        : searchUsers.value?.count ?? 0
+    func numberOfRows(at section: Int, searchController: UISearchController, entersearchLabel: UILabel) -> Int{
+        if searchController.isActive {
+            entersearchLabel.isHidden = filter ? users.value?.count ?? 0 == 0 :  searchUsers.value?.count ?? 0 != 0
+            return filter ? users.value?.count ?? 0
+            : searchUsers.value?.count ?? 0
+        } else {
+            entersearchLabel.isHidden = true
+           return  users.value?.count ?? 0
+        }
+        
     }
     
-    func item(at indexPath: IndexPath) -> Users {
-        return filter ?  users.value![indexPath.row] : searchUsers.value![indexPath.row]
+    func item(at indexPath: IndexPath, searchController: UISearchController) -> Users {
+        
+        if searchController.isActive {
+            return filter ?  users.value![indexPath.row] : searchUsers.value![indexPath.row]
+        } else {
+            return users.value![indexPath.row]
+        }
+
+        
     }
 }
 

@@ -37,7 +37,7 @@ class UsersViewController: UIViewController, UISearchBarDelegate {
             }
         }
         userCollectionView.addSubview(enterSearchTermLabel)
-        enterSearchTermLabel.fillSuperview(padding: .init(top: 100, left: 50, bottom: 0, right: 50))
+        enterSearchTermLabel.fillSuperview(padding: .init(top: 200, left: 130, bottom: 0, right: 70))
         
         setupSearchBar()
         
@@ -109,7 +109,7 @@ extension UsersViewController: UICollectionViewDelegate,
                                UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return 3
-        return viewModel.numberOfRows(at: section)
+            return viewModel.numberOfRows(at: section, searchController: searchController, entersearchLabel: enterSearchTermLabel)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -117,7 +117,7 @@ extension UsersViewController: UICollectionViewDelegate,
         
 //        cell.nameLbl.text = viewModel.item(at: indexPath).name
         
-        cell.setupUsers(users: viewModel.item(at: indexPath))
+        cell.setupUsers(users: viewModel.item(at: indexPath, searchController: searchController))
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         
