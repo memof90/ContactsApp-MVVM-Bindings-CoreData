@@ -15,6 +15,11 @@ class userListViewModel {
     
     var users: Observable<[Users]> = Observable([])
     
+    var searchUsers: Observable<[Users]> = Observable([])
+    
+    var filter = false
+
+    
   
     func getUsers() {
         NetworkServices.shared.fetchUsers {
@@ -31,11 +36,12 @@ class userListViewModel {
     }
     
     func numberOfRows(at section: Int) -> Int{
-        return users.value?.count ?? 0
+        return filter ? users.value?.count ?? 0
+        : searchUsers.value?.count ?? 0
     }
     
     func item(at indexPath: IndexPath) -> Users {
-        return users.value![indexPath.row]
+        return filter ?  users.value![indexPath.row] : searchUsers.value![indexPath.row]
     }
 }
 
