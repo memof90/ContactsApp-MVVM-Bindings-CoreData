@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Posts" representedClassName=".Posts" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+                <constraint value="userId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="PostsId" representedClassName=".PostsId" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+                <constraint value="title"/>
+                <constraint value="body"/>
+                <constraint value="userId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="Users" representedClassName=".Users" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
@@ -24,8 +39,8 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Posts" positionX="190.21630859375" positionY="105.89306640625" width="128" height="58"/>
-        <element name="PostsId" positionX="-62.976318359375" positionY="111.6164855957031" width="128" height="43"/>
+        <element name="Posts" positionX="190.21630859375" positionY="105.89306640625" width="128" height="59"/>
+        <element name="PostsId" positionX="-62.976318359375" positionY="111.6164855957031" width="128" height="89"/>
         <element name="Users" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

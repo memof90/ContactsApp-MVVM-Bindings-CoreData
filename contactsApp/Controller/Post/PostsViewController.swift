@@ -13,10 +13,19 @@ class PostsViewController : UIViewController {
     
     @IBOutlet weak var ContactsDetailsCollectionView: UICollectionView!
     
+    @IBOutlet weak var postIdCollectionView: UICollectionView!
+    
+    
+    @IBOutlet weak var LoadingData: UIActivityIndicatorView!
     
     var didselectHandler: (() -> ())?
     
     var viewModel : userListViewModel!
+    
+    private var locationTimer: Timer?
+    private var saveTimer: Timer?
+    
+    var viewModelPost  = PostsListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,22 +33,43 @@ class PostsViewController : UIViewController {
         ContactsDetailsCollectionView.delegate = self
         ContactsDetailsCollectionView.dataSource = self
         
-        viewModel.users.bind { [weak self] _ in
+        postIdCollectionView.delegate = self
+        postIdCollectionView.dataSource = self
+        
+
+        viewModelPost.postsId.bind { [weak self] _ in
             
             DispatchQueue.main.async {
-                self?.ContactsDetailsCollectionView.reloadData()
+                    self?.postIdCollectionView.reloadData()
             }
-            
+        
+        }
+       
+        
+        saveTimer = .scheduledTimer(withTimeInterval: 6.0, repeats: true) { [weak self] _ in
+            self?.viewModelPost.getPostId()
+            self?.viewModelPost.fetchToCoreDataPostId()
+            self?.viewModelPost.resetCoreDataPostId()
         }
         
+
+       
+        
         RegisterNibsCells()
+        
+        LoadingData.startAnimating()
+        LoadingData.isHidden = false
         
         
     }
     
+    
     //    MARK: - RegisterNibsCells
         private func RegisterNibsCells() {
             ContactsDetailsCollectionView.register(UINib(nibName: DetailCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DetailCollectionViewCell.identifier)
+            
+            postIdCollectionView.register(UINib(nibName: PostsCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PostsCollectionViewCell.identifier)
+            
         }
     
 }
@@ -47,18 +77,15 @@ class PostsViewController : UIViewController {
 
 extension PostsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return viewModelPost.collectionViewNumberOfItemsInSection(collectionView, usersCollectionViewCell: ContactsDetailsCollectionView, postCollectionViewCell: postIdCollectionView)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UsersCollectionViewCell.identifier, for: indexPath) as! UsersCollectionViewCell
         
-        cell.setupUsers(users: viewModel.users.value![indexPath.row])
+
+        return viewModelPost.collectionViewcellForItemAt(collectionView, usersCollectionViewCell: ContactsDetailsCollectionView, postCollectionViewCell: postIdCollectionView, viewModel: viewModel, ActivityIndicator: LoadingData ,cellForItemAt: indexPath)
         
-        cell.seeMoreBtn.isHidden = true
-        
-        
-        return cell
+     
     }
     
     

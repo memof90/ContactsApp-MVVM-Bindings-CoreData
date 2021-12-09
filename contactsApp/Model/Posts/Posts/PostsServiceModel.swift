@@ -10,6 +10,7 @@ import CoreData
 
 struct PostServicesModel: Codable {
     let userId: Int
+    let id: Int
     
     static let database = DatabaseHandler.shared
     
@@ -18,7 +19,9 @@ struct PostServicesModel: Codable {
         guard let posts = PostServicesModel.database.add(Posts.self) else {return}
         
         
+        posts.id = Int16(id)
         posts.userId = Int16(userId)
+      
         
         
         PostServicesModel.database.save()

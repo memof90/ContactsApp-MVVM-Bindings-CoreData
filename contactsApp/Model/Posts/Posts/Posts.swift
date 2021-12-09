@@ -10,5 +10,6 @@ import CoreData
 
 
 public class Posts: NSManagedObject {
+    @NSManaged var id: Int16
     @NSManaged var userId: Int16
 }

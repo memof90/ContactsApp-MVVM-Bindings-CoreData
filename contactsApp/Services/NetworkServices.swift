@@ -79,7 +79,7 @@ class NetworkServices {
 //                let json = try JSONSerialization.jsonObject(with: data!)
 //                             print(json)
                 let model = try JSONDecoder().decode([PostIdServicesModel].self, from: data!)
-                print(model)
+//                print(model)
                 
                 model.forEach {
                     $0.store()

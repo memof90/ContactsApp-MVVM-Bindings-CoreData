@@ -83,12 +83,21 @@ class ViewController: UIViewController {
         post = database.fetch(Posts.self)
     }
     
+    var potss: [Posts] = []
+    
     func postId(){
 
+    
         for posts in post {
             NetworkServices.shared.fetchPostUserId(userId: posts.userId) {
                 
-               }
+        }
+           
+//            print(array.removingDuplicates())
+            
+//            print(userId)
+            
+         
         }
        
     }

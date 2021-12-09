@@ -10,7 +10,7 @@ import UIKit
 class DetailCollectionViewCell: UICollectionViewCell {
     
     //    MARK: - Cell identifier
-        static let identifier = String(describing: UsersCollectionViewCell.self)
+        static let identifier = String(describing: DetailCollectionViewCell.self)
     
     @IBOutlet weak var nameLbl: UILabel!
     
