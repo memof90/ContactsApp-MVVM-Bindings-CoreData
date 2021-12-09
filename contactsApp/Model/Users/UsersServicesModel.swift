@@ -18,13 +18,7 @@ struct UsersServicesModel: Codable {
     
     func store() {
         guard let users = UsersServicesModel.database.add(Users.self) else {return}
-        
-//        let id = users.id
-////        if id == 0 {return}
-//        let predicate = NSPredicate.init(format: "id == %@", id)
-//        guard let isSaved = UsersServicesModel.database.isEntrySaved(entity: "Users", predicate: predicate) else {return}
-//        if isSaved {return}
-        
+                
         
         users.id = Int16(id)
         users.name = name

@@ -21,6 +21,7 @@ struct PostIdServicesModel : Codable {
         
         guard let postsId = PostIdServicesModel.database.add(PostsId.self) else {return}
         
+
         
         postsId.userId = Int16(userId)
         postsId.id = Int16(id)

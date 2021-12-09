@@ -45,12 +45,14 @@ class PostsViewController : UIViewController {
         
         }
        
+//        self.viewModelPost.getPost()
+//        self.viewModelPost.fetchToCoreDataPost()
         
-        saveTimer = .scheduledTimer(withTimeInterval: 6.0, repeats: true) { [weak self] _ in
-            self?.viewModelPost.getPostId()
-            self?.viewModelPost.fetchToCoreDataPostId()
-            self?.viewModelPost.resetCoreDataPostId()
-        }
+        
+            self.viewModelPost.getPostId()
+            self.viewModelPost.fetchToCoreDataPostId()
+//            self.viewModelPost.resetCoreDataPostId()
+        
         
 
        

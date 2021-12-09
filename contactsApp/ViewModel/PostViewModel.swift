@@ -43,7 +43,7 @@ class PostsListViewModel {
                         DispatchQueue.main.async {
                             self.postsId.value = self.database.fetch(PostsId.self)
                         }
-                       
+
                     }
     }
     
