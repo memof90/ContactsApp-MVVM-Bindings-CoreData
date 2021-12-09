@@ -22,10 +22,11 @@ class UsersCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var seeMoreBtn: UIButton!
     
-    
+    var didselectHandler: (() -> ())?
    
     @IBAction func pushMoreBtn(_ sender: Any) {
-        print("hello")
+        didselectHandler?()
+        print("funciona")
     }
     
     func setupUsers(users: Users){

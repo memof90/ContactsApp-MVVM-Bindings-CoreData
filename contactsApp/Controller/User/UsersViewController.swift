@@ -105,11 +105,26 @@ class UsersViewController: UIViewController, UISearchBarDelegate {
 
 
 
+
+
 extension UsersViewController: UICollectionViewDelegate,
                                UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return 3
             return viewModel.numberOfRows(at: section, searchController: searchController, entersearchLabel: enterSearchTermLabel)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let postIdController = self.storyboard?.instantiateViewController(withIdentifier: "PostsViewController") as? PostsViewController else {return}
+        
+        postIdController.viewModel = self.viewModel
+        
+       
+        
+        self.navigationController?.pushViewController(postIdController, animated: true)
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -120,6 +135,23 @@ extension UsersViewController: UICollectionViewDelegate,
         cell.setupUsers(users: viewModel.item(at: indexPath, searchController: searchController))
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
+        
+//        MARK: - Navigation
+        
+  
+        
+        cell.didselectHandler = {
+            guard let postIdController = self.storyboard?.instantiateViewController(withIdentifier: "PostsViewController") as? PostsViewController else {return}
+            
+            postIdController.viewModel = self.viewModel
+            
+            postIdController.didselectHandler = {
+                
+            }
+            
+            self.navigationController?.pushViewController(postIdController, animated: true)
+            
+        }
         
         return cell
     }
