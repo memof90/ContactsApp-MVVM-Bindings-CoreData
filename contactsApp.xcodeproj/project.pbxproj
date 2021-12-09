@@ -79,6 +79,7 @@
 		8DDC4F0E276286BC00F8E0AD /* Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.43.00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.43.00.png"; sourceTree = "<group>"; };
 		8DDC4F0F276286BC00F8E0AD /* Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.42.41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.42.41.png"; sourceTree = "<group>"; };
 		8DDC4F10276286BC00F8E0AD /* Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.42.53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.42.53.png"; sourceTree = "<group>"; };
+		8DDC4F162762873D00F8E0AD /* Simulator Screen Recording - iPhone 13 Pro - 2021-12-09 at 13.49.06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Simulator Screen Recording - iPhone 13 Pro - 2021-12-09 at 13.49.06.mp4"; sourceTree = "<group>"; };
 		8DF3FE0527610440003B2D07 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		8DFCFA1E276007BD001C0812 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8DFCFA20276007EA001C0812 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -278,6 +279,7 @@
 		8DDC4F0B276286BC00F8E0AD /* ScreenShots */ = {
 			isa = PBXGroup;
 			children = (
+				8DDC4F162762873D00F8E0AD /* Simulator Screen Recording - iPhone 13 Pro - 2021-12-09 at 13.49.06.mp4 */,
 				8DDC4F0C276286BC00F8E0AD /* Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.42.34.png */,
 				8DDC4F0D276286BC00F8E0AD /* Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.41.58.png */,
 				8DDC4F0E276286BC00F8E0AD /* Simulator Screen Shot - iPhone 13 Pro - 2021-12-09 at 13.43.00.png */,
