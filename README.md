@@ -46,7 +46,7 @@ This is a ContactsApp  MVVM with architecture  Design pattern Bindings  and  Cor
   <tr>
     <td><img src="https://github.com/memof90/ContactsApp-MVVM-Bindings-CoreData/blob/master/contactsApp/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202021-12-09%20at%2013.41.58.png?raw=true" width=270 height=480></td>
     <td><img src="https://github.com/memof90/ContactsApp-MVVM-Bindings-CoreData/blob/master/contactsApp/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202021-12-09%20at%2013.42.34.png?raw=true" width=270 height=480></td>
-     <td>< src="https://github.com/memof90/ContactsApp-MVVM-Bindings-CoreData/blob/master/contactsApp/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202021-12-09%20at%2013.42.41.png?raw=true" width=270 height=480></td>
+     <td><img src="https://github.com/memof90/ContactsApp-MVVM-Bindings-CoreData/blob/master/contactsApp/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202021-12-09%20at%2013.42.41.png?raw=true" width=270 height=480></td>
   </tr>
  </table>
  
