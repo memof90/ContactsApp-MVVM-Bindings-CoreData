@@ -32,7 +32,7 @@ class NetworkServices {
                 completion()
                 
             } catch {
-                
+                print(error.localizedDescription)
             }
         }
         task.resume()
@@ -58,7 +58,7 @@ class NetworkServices {
                 completion()
                 
             } catch {
-                
+                print(error.localizedDescription)
             }
     
         }
@@ -87,7 +87,7 @@ class NetworkServices {
                 
                 completion()
             } catch {
-                
+                print(error.localizedDescription)
             }
 
         }
