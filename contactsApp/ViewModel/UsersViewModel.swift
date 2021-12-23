@@ -35,6 +35,21 @@ class userListViewModel {
         self.database.reset(Users.self)
     }
     
+    func didSelectItemAt(at collectionView: UICollectionView,  didSelectItemAt indexPath: IndexPath, with navigationController: UINavigationController, searchController: UISearchController ) {
+        if searchController.isActive {
+            let itemDetail = filter ? users.value![indexPath.row] : searchUsers.value![indexPath.row]
+            let controller = PostsViewController.instance()
+            controller.viewModel = itemDetail
+            navigationController.pushViewController(controller, animated: true)
+        } else {
+            let controller = PostsViewController.instance()
+            controller.viewModel = users.value![indexPath.row]
+            navigationController.pushViewController(controller, animated: true)
+        }
+      
+        
+    }
+    
     func numberOfRows(at section: Int, searchController: UISearchController, entersearchLabel: UILabel) -> Int{
         if searchController.isActive {
             entersearchLabel.isHidden = filter ? users.value?.count ?? 0 == 0 :  searchUsers.value?.count ?? 0 != 0
@@ -59,6 +74,18 @@ class userListViewModel {
     }
 }
 
-
+//struct userViewModel {
+//     let id: Int
+//     let name: String
+//     let email: String
+//     let phone: String
+//    
+//    init(user: Users) {
+//        self.id = Int(user.id)
+//        self.name = user.name
+//        self.email = user.email
+//        self.phone = user.phone
+//    }
+//}
 
 

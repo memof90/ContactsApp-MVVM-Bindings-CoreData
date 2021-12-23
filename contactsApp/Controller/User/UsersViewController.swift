@@ -116,13 +116,8 @@ extension UsersViewController: UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        guard let postIdController = self.storyboard?.instantiateViewController(withIdentifier: "PostsViewController") as? PostsViewController else {return}
-        
-        postIdController.viewModel = self.viewModel
-        
-       
-        
-        self.navigationController?.pushViewController(postIdController, animated: true)
+
+        viewModel.didSelectItemAt(at: collectionView, didSelectItemAt: indexPath, with: self.navigationController!, searchController: searchController)
         
         
     }
@@ -130,7 +125,6 @@ extension UsersViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UsersCollectionViewCell.identifier, for: indexPath) as! UsersCollectionViewCell
         
-//        cell.nameLbl.text = viewModel.item(at: indexPath).name
         
         cell.setupUsers(users: viewModel.item(at: indexPath, searchController: searchController))
         activityIndicator.stopAnimating()
@@ -143,7 +137,8 @@ extension UsersViewController: UICollectionViewDelegate,
         cell.didselectHandler = {
             guard let postIdController = self.storyboard?.instantiateViewController(withIdentifier: "PostsViewController") as? PostsViewController else {return}
             
-            postIdController.viewModel = self.viewModel
+//            postIdController.viewModel = self.viewModel
+            
             
             postIdController.didselectHandler = {
                 

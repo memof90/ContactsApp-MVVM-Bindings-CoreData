@@ -72,13 +72,14 @@ class PostsListViewModel {
         }
     }
     
-    func collectionViewcellForItemAt(_ collectionView: UICollectionView,usersCollectionViewCell: UICollectionView, postCollectionViewCell: UICollectionView, viewModel: userListViewModel , ActivityIndicator: UIActivityIndicatorView ,cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionViewcellForItemAt(_ collectionView: UICollectionView,usersCollectionViewCell: UICollectionView, postCollectionViewCell: UICollectionView, viewModel: Users , ActivityIndicator: UIActivityIndicatorView ,cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
         switch collectionView {
         case usersCollectionViewCell:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailCollectionViewCell.identifier, for: indexPath) as! DetailCollectionViewCell
             
-            cell.setupDetailPost(users: viewModel.users.value![indexPath.row])
+//            cell.setupDetailPost(users: viewModel.users.value![indexPath.row])
+            cell.user = viewModel
             
             return cell
         

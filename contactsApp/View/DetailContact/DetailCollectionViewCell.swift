@@ -18,12 +18,26 @@ class DetailCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var mailLbl: UILabel!
     
-    
-    func setupDetailPost(users: Users) {
-        nameLbl.text = users.name
-        phoneLbl.text = users.phone
-        mailLbl.text = users.email
+    var user: Users? {
+        didSet {
+            setupData()
+        }
     }
+    
+    
+    func setupData() {
+        guard let user = user else {return}
+        nameLbl.text = user.name
+        phoneLbl.text = user.phone
+        mailLbl.text = user.email
+    }
+    
+//    MARK: - Options Two Use protocol and delegate
+//    func setupDetailPost(users: Users) {
+//        nameLbl.text = users.name
+//        phoneLbl.text = users.phone
+//        mailLbl.text = users.email
+//    }
     
     
 }

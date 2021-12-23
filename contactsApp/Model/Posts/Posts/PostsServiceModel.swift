@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct PostServicesModel: Codable {
+struct PostServicesModel: Codable, Hashable {
     let userId: Int
     let id: Int
     
@@ -29,3 +29,14 @@ struct PostServicesModel: Codable {
     
     
 }
+
+
+struct Post : Decodable {
+    let userID : Int
+    
+    enum CodingKeys: String, CodingKey {
+        case userID = "userId"
+    }
+}
+
+typealias PostModel =  [Post]

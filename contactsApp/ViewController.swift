@@ -14,8 +14,12 @@ class ViewController: UIViewController {
     let database = DatabaseHandler.shared
     
     var viewModel = userListViewModel()
+    
+    
 
 
+        
+    
     
 //    var users: [Users]? {
 //        didSet {
@@ -41,15 +45,20 @@ class ViewController: UIViewController {
 //        viewModel.getUsers()
 //        viewModel.fetchToCoreData()
         getPost()
-        fetchCoreData()
-        postId()
+//        fetchCoreData()
+//        postId()
         
-        viewModel.users.bind { [weak self ] _ in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-                self?.viewModel.resetCoreData()
-            }
-        }
+//        viewModel.users.bind { [weak self ] _ in
+//            DispatchQueue.main.async {
+//                self?.tableView.reloadData()
+//                self?.viewModel.resetCoreData()
+//            }
+//        }
+        
+        let defaults = UserDefaults.standard
+        let array = defaults.array(forKey: "SavedIntArray")  as? [Int] ?? [Int]()
+        print(array)
+   
      
     }
 
@@ -71,36 +80,16 @@ class ViewController: UIViewController {
 //        self.database.reset(Users.self)
 //    }
     
-    var post: [Posts] = []
+  
     
     func getPost(){
-        NetworkServices.shared.fetchPostUser {
-            self.post = self.database.fetch(Posts.self)
-        }
-    }
-    
-    func fetchCoreData() {
-        post = database.fetch(Posts.self)
-    }
-    
-    var potss: [Posts] = []
-    
-    func postId(){
-
-    
-        for posts in post {
-            NetworkServices.shared.fetchPostUserId(userId: posts.userId) {
-                
-        }
-           
-//            print(array.removingDuplicates())
             
-//            print(userId)
-            
-         
-        }
-       
     }
+    
+//    func fetchCoreData() {
+//        post = database.fetch(Posts.self)
+//    }
+    
     
    
     

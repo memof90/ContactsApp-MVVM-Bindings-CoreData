@@ -20,10 +20,9 @@ class PostsViewController : UIViewController {
     
     var didselectHandler: (() -> ())?
     
-    var viewModel : userListViewModel!
+    var viewModel : Users!
     
-    private var locationTimer: Timer?
-    private var saveTimer: Timer?
+
     
     var viewModelPost  = PostsListViewModel()
     

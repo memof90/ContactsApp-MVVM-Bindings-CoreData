@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class NetworkServices {
     static let shared = NetworkServices()
     
@@ -47,10 +46,15 @@ class NetworkServices {
         let task = session.dataTask(with: request) { data, response, error in
 //            print(response!)
             do {
-                            
-                let model = try JSONDecoder().decode([PostServicesModel].self, from: data!)
-//                print(model)
+//                print(String(data: data!, encoding: .utf8)!)
                 
+//                let json = try JSONSerialization.jsonObject(with: data!) as! [[String: AnyObject]]
+//                print(json.count)
+                            
+                
+                let model = try JSONDecoder().decode([PostServicesModel].self, from: data!)
+                
+               
                 model.forEach {
                     $0.store()
                 }
@@ -64,6 +68,43 @@ class NetworkServices {
         }
         task.resume()
         
+    }
+    
+    
+    
+    func fetchPost(completion: @escaping (PostModel? , Error?) -> ()) {
+        let URL_BASE = Enviroment.usersId
+        guard let url = URL(string: URL_BASE.rawValue) else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        
+        let task = session.dataTask(with: request) { data, response, err in
+//            print(String(data: data!, encoding: .utf8)!)
+            //            error to requets
+                        if let err = err {
+                            print("Failed to fetch apps:", err)
+                            completion([], nil)
+                            return
+                        }
+                guard let data = data else { return }
+            
+            do {
+                let postId = try JSONDecoder().decode(PostModel.self, from: data)
+                
+              
+                completion(postId, nil)
+                
+                
+                
+            } catch let jsonErr {
+                debugPrint("Failed to decode json:", jsonErr)
+                completion([], jsonErr)
+            }
+            
+            
+        }
+        task.resume()
     }
     
     func fetchPostUserId(userId: Int16,completion: @escaping (()-> Void)) {
