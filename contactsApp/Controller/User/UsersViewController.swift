@@ -135,16 +135,18 @@ extension UsersViewController: UICollectionViewDelegate,
   
         
         cell.didselectHandler = {
-            guard let postIdController = self.storyboard?.instantiateViewController(withIdentifier: "PostsViewController") as? PostsViewController else {return}
             
-//            postIdController.viewModel = self.viewModel
-            
-            
-            postIdController.didselectHandler = {
-                
-            }
-            
-            self.navigationController?.pushViewController(postIdController, animated: true)
+            self.viewModel.didSelectItemAt(at: collectionView, didSelectItemAt: indexPath, with: self.navigationController!, searchController: self.searchController)
+//            guard let postIdController = self.storyboard?.instantiateViewController(withIdentifier: "PostsViewController") as? PostsViewController else {return}
+//
+////            postIdController.viewModel = self.viewModel
+//
+//
+//            postIdController.didselectHandler = {
+//
+//            }
+//
+//            self.navigationController?.pushViewController(postIdController, animated: true)
             
         }
         
